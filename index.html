@@ -10,20 +10,20 @@
     /* Global Styles */
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #fdfcfb, #e2d1c3);
+      background: linear-gradient(to bottom, #fff 30%, #ccf0c0);
       margin: 0;
       padding: 0;
     }
     /* Navbar Styles */
     .navbar {
-      background-color: #343a40;
+      background-color: #6991ce;
     }
     .navbar-brand {
       color: #fff;
     }
     /* Collapse Menu Styles */
     .collapse-menu {
-      background-color: #343a40;
+      background-color: #6991ce;
       padding: 1rem;
     }
     .collapse-menu button {
@@ -32,6 +32,14 @@
     }
     .collapse-menu button:last-child {
       margin-bottom: 0;
+    }
+    .container-fluid img{
+      padding-bottom: 40px;
+    }
+    @media (min-width: 1200px){
+      .container-fluid img{
+        height: 750px;
+      }
     }
   </style>
 </head>
@@ -57,7 +65,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid p-0">
+    <div class="container-fluid p-0">
       <div class="col-12 p-0">
         <picture>
           <source srcset="img/banner_2800desktop.webp" media="(min-width: 1200px)">
@@ -65,18 +73,26 @@
           <img src="img/banner.png" alt="" class="img-fluid w-100">
         </picture>
       </div>
-  </div>
-  <!-- Seção de Qualificações -->
-  <section class="qualifications">
-    <div class="container">
-      <h2>Minhas Competências</h2>
-      <p>
-        Eu sou psicóloga Infanto juvenil, pós graduanda em TCC para crianças e adolescentes e Inteligência Parental.
-        Atendo crianças de 3-11 anos, adolescentes de 12-19 anos, presencialmente e online (acima de 9 anos). 
-        Auxilio os pais com orientações sobre desenvolvimento infantil para melhor lidar com seus filhos e terem uma relação saudável e harmoniosa.
-      </p>
     </div>
-  </section>
+
+  <div class="container">  
+    <div class="row">
+    <div class="col-4">
+      <img src="./img/imgSobre.jpeg" alt="" class="w-100">
+    </div>
+    <!-- Seção de Qualificações -->
+    <section class="qualifications col-6">
+      <div class="container">
+        <h2>Minhas Competências</h2>
+        <p>
+          Eu sou psicóloga Infanto juvenil, pós graduanda em TCC para crianças e adolescentes e Inteligência Parental.
+          Atendo crianças de 3-11 anos, adolescentes de 12-19 anos, presencialmente e online (acima de 9 anos). 
+          Auxilio os pais com orientações sobre desenvolvimento infantil para melhor lidar com seus filhos e terem uma relação saudável e harmoniosa.
+        </p>
+      </div>
+    </section>
+  </div>
+  </div>  
 
   <!-- Seção de Contato -->
   <section class="contact-section">
