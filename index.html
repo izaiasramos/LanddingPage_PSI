@@ -6,167 +6,639 @@
   <title>Bruna Bessa - Psicóloga Infantil</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/index.css">
   <style>
-    /* Global Styles */
+    /* Estilos globais */
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #fff 30%, #ccf0c0);
+      background-color: #fff;
       margin: 0;
       padding: 0;
     }
-    /* Navbar Styles */
-    .navbar {
-      background-color: #6991ce;
+    
+ 
+    /* Outros estilos permanecem */
+    .sobre {
+      padding-top: 50px;
     }
-    .navbar-brand {
-      color: #fff;
+    .sobre img {
+      border-radius: 10px;
+      height: 30vh;
     }
-    /* Collapse Menu Styles */
-    .collapse-menu {
-      background-color: #6991ce;
-      padding: 1rem;
-    }
-    .collapse-menu button {
-      margin-bottom: 1rem;
-      width: 100%;
-    }
-    .collapse-menu button:last-child {
-      margin-bottom: 0;
-    }
-    .container-fluid img{
-      padding-bottom: 40px;
-    }
-    @media (min-width: 1200px){
-      .container-fluid img{
-        height: 750px;
+
+    @media (max-width: 500px) {
+      .textSobre {
+        width: 80%;
+        margin-left: 30px;
       }
     }
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
 </head>
 <body>
   <div class="pos-f-t">
-    <!-- Header com Navbar -->
     <nav class="navbar navbar-dark">
-      <div class="container-fluid">
+      <div class="desktop-menu container-fluid">
         <a class="navbar-brand" href="#">Bruna Bessa</a>
-        <!-- Botão que aciona o collapse -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+
+          <!-- Menu exclusivo para desktop -->
+          <nav class="d-none d-lg-block mt-0 pt-0">
+            <div class="container text-center">
+              <a href="#sobre">Sobre</a>
+              <a href="#qualifications">Competências</a>
+              <a href="#trajetoria">Trajetória</a>
+              <a href="#contact">Contato</a>
+            </div>
+          </nav>
+        <!-- Botão de collapse: só aparece em mobile -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alternar navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
     </nav>
-    <!-- Conteúdo que aparece ao clicar no botão -->
-    <div class="collapse" id="navbarToggleExternalContent">
+    <!-- Conteúdo do menu collapse (só mobile) -->
+    <div class="collapse d-lg-none" id="navbarToggleExternalContent">
       <div class="collapse-menu d-flex flex-column align-items-center">
-        <button class="btn btn-outline-success" type="button">Main button</button>
-        <button class="btn btn-outline-success" type="button">Main button</button>
-        <button class="btn btn-outline-success" type="button">Main button</button>
-        <button class="btn btn-outline-success" type="button">Main button</button>
+        <button class="btn btn-outline-success" type="button">Botão principal</button>
+        <button class="btn btn-outline-success" type="button">Botão principal</button>
+        <button class="btn btn-outline-success" type="button">Botão principal</button>
+        <button class="btn btn-outline-success" type="button">Botão principal</button>
       </div>
     </div>
   </div>
-    <div class="container-fluid p-0">
-      <div class="col-12 p-0">
-        <picture>
-          <source srcset="img/banner_2800desktop.webp" media="(min-width: 1200px)">
-          <source srcset="img/banner_desktop.webp" media="(min-width: 768px)">
-          <img src="img/banner.png" alt="" class="img-fluid w-100">
-        </picture>
-      </div>
+  <!-- Banner (com margem para não ser ocultado pelo menu fixo) -->
+  <div class="container-fluid p-0 banner">
+    <div class="col-12">
+      <picture>
+        <source class="bannerDesck" srcset="img/banner_2800desktop.webp" media="(min-width: 1200px)">
+        <source class="bannerMedio" srcset="img/banner_desktop.webp" media="(min-width: 768px)">
+        <img src="img/banner.png" alt="" class="w-100 mt-0 p-0">
+      </picture>
+    </div>
+  </div>
+
+
+    <!-- Botão Flutuante -->
+    <div class="floating-button">
+      <a href="https://api.whatsapp.com/send?phone=5511998110569&text=Olá,%20gostaria%20de%20falar%20com%20a%20Bruna%20Bessa." target="_blank" aria-label="whattsap" class="floating-btn">
+        <i class="ri-whatsapp-line"></i>
+      </a>
     </div>
 
-  <div class="container">  
+
+  <!-- Seção Sobre/Qualificações -->
+  <div class="container col-10 my-5">
     <div class="row">
-    <div class="col-4">
-      <img src="./img/imgSobre.jpeg" alt="" class="w-100">
-    </div>
-    <!-- Seção de Qualificações -->
-    <section class="qualifications col-6">
-      <div class="container">
-        <h2>Minhas Competências</h2>
-        <p>
-          Eu sou psicóloga Infanto juvenil, pós graduanda em TCC para crianças e adolescentes e Inteligência Parental.
-          Atendo crianças de 3-11 anos, adolescentes de 12-19 anos, presencialmente e online (acima de 9 anos). 
-          Auxilio os pais com orientações sobre desenvolvimento infantil para melhor lidar com seus filhos e terem uma relação saudável e harmoniosa.
-        </p>
+      <!-- Imagem -->
+      <div class="col-12 col-md-5 mb-3 mb-md-0">
+        <img src="./img/imgSobre.jpeg" alt="Bruna Bessa" class="img-fluid rounded w-100">
       </div>
-    </section>
+      <!-- Texto -->
+      <div class="col-12 col-md-7">
+        <div class="row">
+          <!-- Títulos -->
+          <div class="col-12">
+            <h2 style="font-family: 'Helvetica Neue', sans-serif; color:#777; text-align:center;">Bruna Bessa</h2>
+            <h5 style="font-family: sans-serif; color:#555; margin-bottom:20px;text-align:center;">Psicóloga</h5>
+            <h6 style="font-family: sans-serif; font-size:17px; color:#555;">Psicóloga Infanto Juvenil e Orientadora Parental</h6>
+            <p style="font-family: sans-serif; font-size:17px; color:#555; margin-bottom:30px;">Florescendo junto com pais e filhos</p>
+          </div>
+          <!-- Texto dividido em colunas (desktop) -->
+          <div class="col-12 col-md-6">
+            <p class="textSobre" style="font-family: sans-serif; font-size:17px; color:#555; text-align:left;">
+              Eu sou psicóloga Infanto Juvenil, pós graduanda em TCC para crianças e adolescentes e Inteligência Parental.
+            </p>
+          </div>
+          <div class="col-12 col-md-6">
+            <p class="textSobre" style="font-family: sans-serif; font-size:17px; color:#555; text-align:left;">
+              Atendo crianças de 3 a 11 anos, adolescentes de 12 a 19 anos, presencialmente e online (acima de 9 anos).<br>
+              Auxilio os pais com orientações sobre desenvolvimento infantil para melhor lidar com seus filhos e terem uma relação saudável e harmoniosa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  </div>  
 
-  <!-- Seção de Contato -->
-  <section class="contact-section">
+
+<!--
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4" style="color: #6991ce;">Conheça minha trajetória</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <img src="./img/imgSobre.jpeg" alt="Bruna Bessa" class="img-fluid rounded-circle">
+        </div>
+        <div class="timeline-content" style="background-color: #ccf0c0;">
+          <h4 style="color: #6991ce;">Psicóloga Infanto Juvenil</h4>
+          <p>Atuo com crianças de 3-11 anos e adolescentes de 12-19 anos, proporcionando suporte tanto presencial quanto online.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon" style="background-color: #f96d0e;"></div>
+        <div class="timeline-content" style="background-color: #e4ccda;">
+          <h4 style="color: #6991ce;">Especialista em TCC</h4>
+          <p>Pós graduanda em Terapia Cognitivo-Comportamental para crianças e adolescentes, auxiliando no desenvolvimento emocional.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon" style="background-color: #6991ce;"></div>
+        <div class="timeline-content" style="background-color: #ccf0c0;">
+          <h4 style="color: #6991ce;">Orientadora Parental</h4>
+          <p>Apoio os pais com orientações sobre desenvolvimento infantil, promovendo uma relação harmoniosa entre pais e filhos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .timeline {
+      position: relative;
+      padding: 20px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 4px;
+      height: 100%;
+      background: #6991ce;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      margin: 20px 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .timeline-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #6991ce;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .timeline-content {
+      padding: 15px;
+      width: 45%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .timeline-item:nth-child(even) .timeline-content {
+      text-align: right;
+    }
+    .timeline-item:not(:last-child) {
+      margin-bottom: 40px;
+    } #}-->
+  <style>   
+    .impact-section .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .impact {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .impact-card {
+      flex: 1; /* Isso faz com que todos tenham a mesma altura */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 20px;
+    }
+    
+  </style>
+
+
+  <section class="impact-section py-5" style="background-color: #f0f0f0;">
     <div class="container">
-      <h2 class="text-center">Entre em Contato</h2>
-      <form id="contactForm">
-        <div class="mb-3">
-          <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold mb-4" style="color: #343a40; font-family: 'Montserrat', sans-serif;">Por Que Me Contratar?</h2>
+                <p class="lead" style="color: #6c757d;">Com muitos casos de trabalho e resultados comprovados, ajudamos famílias a fortalecer seus laços e superarem desafios emocionais e comportamentais.</p>
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
+        <div class="row mt-5">
+            <div class="impact col-md-4 text-center mb-4">
+                <div class="impact-card p-4" style="background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-users fa-3x mb-3" style="color: #6991ce;"></i>
+                    <h4 style="color: #343a40; font-weight: bold; font-family: 'Montserrat', sans-serif;">Atendimento Humanizado</h4>
+                    <p style="color: #556374; font-weight: bold;">Cada caso é único. Meu trabalho é focado em entender as necessidades de sua família e oferecer soluções personalizadas.</p>
+                </div>
+            </div>
+            <div class="impact col-md-4 text-center mb-4">
+                <div class="impact-card p-4" style="background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-lightbulb fa-3x mb-3" style="color: #6991ce;"></i>
+                    <h4 style="color: #343a40; font-weight: bold; font-family: 'Montserrat', sans-serif;">Orientação Parental</h4>
+                    <p style="color: #556374; font-weight: bold;">Ajudo os pais a entenderem e lidarem com os desafios do desenvolvimento infantil, promovendo uma relação mais saudável com seus filhos.</p>
+                </div>
+            </div>
+            <div class="impact col-md-4 text-center mb-4">
+                <div class="impact-card p-4" style="background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-laptop fa-3x mb-3" style="color: #6991ce;"></i>
+                    <h4 style="color: #343a40; font-weight: bold; font-family: 'Montserrat', sans-serif;">Atendimento Online e Presencial</h4>
+                    <p style="color: #556374; font-weight:bold">Ofereça flexibilidade para atender sua família da forma que for mais conveniente, com a mesma qualidade e dedicação.</p>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="telefone" class="form-label">Telefone</label>
-          <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Seu telefone" required>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <h3 class="fw-bold mb-3" style="color: #343a40; font-family: 'Montserrat', sans-serif;">Casos que Atendo</h3>
+                <p class="mb-4" style="color: #6c757d;">Já ajudei muitas famílias a superarem desafios como:</p>
+                <div class="row">
+                    <div class="col-md-6 text-start">
+                        <ul class="list-unstyled" style="color: #6c757d;">
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Dificuldades emocionais em crianças e adolescentes</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Conflitos familiares e orientação parental</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Desenvolvimento de habilidades sociais</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-start">
+                        <ul class="list-unstyled" style="color: #6c757d;">
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Acompanhamento psicológico para adolescentes</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Melhoria da comunicação entre pais e filhos</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Superação de traumas e desafios escolares</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="mensagem" class="form-label">Mensagem</label>
-          <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem..." required></textarea>
-        </div>
-        <div class="d-grid">
-          <button type="submit" class="btn btn-primary">Enviar via WhatsApp</button>
-        </div>
-      </form>
     </div>
   </section>
 
-  <!-- Botão WhatsApp Flutuante -->
-  <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp">💬</a>
 
-  <!-- Script para enviar dados para WhatsApp -->
+
+<section class="help-section py-5" style="background: #6991ce; color: #fff;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Quando Buscar Ajuda?</h2>
+    <p class="lead mb-5" style="max-width: 700px; margin: 0 auto;">
+      Se você observa mudanças significativas no comportamento, dificuldades emocionais ou conflitos familiares, é hora de buscar apoio profissional. Estou aqui para transformar desafios em oportunidades de crescimento.
+    </p>
+    <div class="row g-4">
+      <!-- Card 1 -->
+    <style>  
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Espaçamento entre os cards */
+    }
+    
+    .card {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        background: #ccf0c0;
+        color: #222;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    .card-img {
+        border-radius: 10px 10px 0 0; /* Bordas arredondadas superiores */
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .card-content {
+        flex: 1; /* Garante que todo o conteúdo tenha altura igual */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    @media (min-width: 390px) and (max-width: 767px) {  
+        .card-img {
+            height: 90px;
+        }
+    }
+    
+    </style>  
+    
+    <div class="col-md-4">  
+        <div class="card p-0 border-0 shadow-lg text-center">  
+            <img src="img/cards/desafiosEmocionais.jpg" alt="Dificuldades Emocionais" class="card-img" style="width: 100%; height: auto;">  
+            <div class="p-4">  
+                <h5>Desafios Emocionais</h5>  
+                <p>Crianças ou adolescentes com tristeza, ansiedade ou estresse excessivo.</p>  
+            </div>  
+        </div>  
+    </div>  
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card p-0 border-0 shadow-lg text-center" style=" color: #333; border-radius: 10px;">
+          <img src="img/cards/conflitos.jpg" alt="Conflitos Familiares" class="card-img" style="width: 100%; height: auto;">
+          <div class="p-4">
+            <h5>Conflitos Familiares</h5>
+            <p>Problemas de comunicação e desentendimentos que afetam o lar.</p>
+          </div>    
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card p-0 border-0 shadow-lg text-center" style=" color: #333; border-radius: 10px;">
+          <img src="img/cards/academicos.jpg" alt="Dificuldades Acadêmicas" class="card-img" style="width: 100%; height:auto;">
+          <div class="p-4">
+            <h5>Desafios Acadêmicos</h5>
+            <p>Dificuldades na escola que afetam a autoestima e o desempenho.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button-wrap">
+      <div class="glass-button">
+        <a href="#contact" class="btn btn-lg mt-5" style="    background: #2575fc; color:#fff;">Agende Sua Consulta</a>
+      </div>  
+    </div>  
+  </div>
+</section>
+
+
+
+   
+<section id="form" class="form">
+  <div class="container">
+      <div class="row mt-5">
+          <div class="col-12 text-center">
+              <h3 class="fw-bold mb-3" style="color: #343a40; font-family: 'Montserrat', sans-serif;">Vamos Transformar Sua Família!</h3>
+              <p class="mb-4" style="color: #6c757d;">Se você busca fortalecer os laços familiares e superar desafios emocionais, estou aqui para ajudar. Entre em contato e dê o primeiro passo para uma vida mais harmoniosa.</p>
+              <a href="#contactForm" class="btn btn-primary btn-lg" style="background-color: #6991ce; border: none;">Vamos conversar</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="container">
+      <div class="row align-items-center">
+          <!-- Texto Inspirador -->
+          <div class="col-md-6">
+              <h1 class="fw-bold">Juntos, Podemos Transformar o Futuro</h1>
+              <p class="lead">
+                  Toda criança e adolescente merece crescer com equilíbrio emocional, segurança e apoio. Se você percebe desafios no desenvolvimento do seu filho, estou aqui para ajudar. 
+              </p>
+              <p class="fw-semibold">O primeiro passo para um futuro mais saudável começa agora.</p>
+              <a href="#form" class="btn btn-lg my-4" style="background-color: #6991ce; color:#fff;">Agendar Consulta</a>
+          </div>
+          <!-- Imagem Impactante -->
+          <div class="col-md-6 box-shadow">
+              <img src="img/familiaFeliz.jpg" alt="Família feliz" class="img-fluid rounded shadow">
+          </div>
+      </div>
+  </div>
+</section>
+<style>
+  .box-shadow {  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */  
+}  
+.box-shadow:hover {  
+  opacity: 0.8; /* Reduz a opacidade */  
+  transition: opacity 0.5s; /* Animação suave */  
+}  
+</style>
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #5a81c5;
+}
+</style>
+
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 100px 0;
+}
+
+.features {
+    padding: 80px 0;
+}
+
+.feature-item {
+    padding: 20px;
+}
+
+.feature-item i {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.form {
+    padding: 80px 0;
+}
+</style>
+
+
+  <section class="contact-section py-5 text-center text-white" style="background-color: #6991ce;">
+    <div class="container">
+      <blockquote class="blockquote">
+        <p class="mb-3">"Cada desafio na infância é uma oportunidade para crescer. Estou aqui para ajudar você e seu filho nessa jornada."</p>
+        <footer class="blockquote-footer text-white">Bruna Bessa</footer>
+      </blockquote>
+      <h2 class="fw-bold mt-3">Quer conversar? Estou à disposição!</h2>
+      <p>
+        Preencha o formulário e compartilhe suas preocupações.  
+        Juntos, podemos encontrar o melhor caminho para fortalecer sua relação familiar.
+      </p>
+      <div class="container">
+        <div class="contact-form-container">
+            <h2>Fale Conosco</h2>
+            <form id="contactForm" class="contact-form" action="send_email.php" method="POST">
+                <div class="input-group">
+                    <i class="icon fas fa-user"></i>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="input-group">
+                    <i class="icon fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="input-group">
+                    <i class="icon fas fa-phone"></i>
+                    <input type="text" id="telefone" name="telefone" placeholder="Seu telefone" required>
+                </div>
+                <div class="input-group full-width">
+                    <i class="icon fas fa-comment"></i>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Ícones do FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+  </section>
+<style>
+  .contact-form-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-form .input-group {
+    width: 48%;
+    position: relative;
+}
+
+.contact-form .input-group.full-width {
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: none;
+    padding: 12px 45px;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 8px rgba(105, 145, 206, 0.5);
+}
+
+.contact-form .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #6991ce;
+}
+
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #6991ce, #5678b8);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #5678b8, #415d9b);
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .contact-form .input-group {
+        width: 100%;
+    }
+}
+
+
+</style>
+  <!-- Script para fechar o menu mobile ao clicar fora dele -->
   <script>
-      // Fecha o menu quando clicar fora dele, sem interferir no clique do toggler
-      document.addEventListener('click', function(event) {
-        const collapseElement = document.getElementById('navbarToggleExternalContent');
-        const toggler = document.querySelector('.navbar-toggler');
-        
-        // Se o clique for no toggler, não faz nada (deixe o Bootstrap tratar o toggle)
-        if (toggler.contains(event.target)) {
-          return;
+    document.addEventListener('click', function(event) {
+      const collapseElement = document.getElementById('navbarToggleExternalContent');
+      const toggler = document.querySelector('.navbar-toggler');
+      if (toggler.contains(event.target)) return;
+      if (collapseElement.classList.contains('show') && !collapseElement.contains(event.target)) {
+        let collapseInstance = bootstrap.Collapse.getInstance(collapseElement);
+        if (!collapseInstance) {
+          collapseInstance = new bootstrap.Collapse(collapseElement, { toggle: false });
         }
-        // Se o menu estiver aberto e o clique for fora do menu, feche-o
-        if (collapseElement.classList.contains('show') && !collapseElement.contains(event.target)) {
-          let collapseInstance = bootstrap.Collapse.getInstance(collapseElement);
-          // Caso não exista uma instância, cria uma sem toggle automático
-          if (!collapseInstance) {
-            collapseInstance = new bootstrap.Collapse(collapseElement, { toggle: false });
-          }
-          collapseInstance.hide();
-        }
-      });
-
-
+        collapseInstance.hide();
+      }
+    });
+    
+    // Script para enviar formulário via WhatsApp
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       var nome = document.getElementById('nome').value;
       var email = document.getElementById('email').value;
       var telefone = document.getElementById('telefone').value;
       var mensagem = document.getElementById('mensagem').value;
-
-      var texto = '*Contato via Landing Page*%0A';
-      texto += '*Nome:* ' + nome + '%0A';
-      texto += '*Email:* ' + email + '%0A';
-      texto += '*Telefone:* ' + telefone + '%0A';
-      texto += '*Mensagem:* ' + mensagem + '%0A';
-
-      var numeroWhatsApp = '5511999999999'; // Substitua pelo número correto
-      var url = 'https://wa.me/' + numeroWhatsApp + '?text=' + encodeURIComponent(texto);
-      window.open(url, '_blank');
+    
+      // Monta a mensagem usando \n para quebras de linha
+      var texto = "Contato via Landing Page:\n" +
+                  "Nome: " + nome + "\n" +
+                  "E-mail: " + email + "\n" +
+                  "Telefone: " + telefone + "\n" +
+                  "Mensagem: " + mensagem;
+      
+      // Substitua pelo seu número do WhatsApp com código do país (ex.: 55 para Brasil)
+      var numeroWhatsApp = "5511998110569";
+      
+      // Cria a URL com os parâmetros da mensagem
+      var url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texto);
+      window.open(url, "_blank");
     });
   </script>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

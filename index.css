@@ -1,0 +1,118 @@
+/* HEADER */
+
+/* Menu Mobile: */
+.pos-f-t {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+  }
+  .navbar {
+    background-color: #6991ce;
+  }
+  .navbar-brand {
+    color: #fff;
+  }
+  /* O botão de collapse (apenas mobile) permanece visível em telas menores */
+  .navbar-toggler {
+    display: block;
+  }
+  @media (min-width: 992px) { /* lg breakpoint */
+    .navbar-toggler, 
+    #navbarToggleExternalContent {
+      display: none !important;
+    }
+  }
+  /* Collapse Menu Styles para mobile */
+  .collapse-menu {
+    background-color: #6991ce;
+    padding: 1rem;
+  }
+  .collapse-menu button {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .collapse-menu button:last-child {
+    margin-bottom: 0;
+  }
+  /* Menu Desktop (flutuante) */
+  .desktop-menu {
+    position: fixed;
+    top: 0; /* ou ajuste para que fique abaixo de um eventual cabeçalho */
+    width: 100%;
+    background-color: #6991ce;
+    height: 70px;
+    z-index: 1050;
+  }
+  .desktop-menu .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+  }
+  .desktop-menu a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  .desktop-menu a:hover {
+    text-decoration: underline;
+  }
+
+  /* BANNER */
+
+     /* Banner: adicionar margem superior para não ficar oculto atrás do menu fixo */
+     .banner {
+        margin-top: 50px; /* igual à altura do menu desktop (ajuste se necessário) */
+      }
+      .container-fluid img {
+        padding-bottom: 140px;
+        height: 550px;
+        background-size: cover !important;
+      }
+
+    @media (min-width: 1200px) {
+      /*Banner*/  
+      .container-fluid img {
+        height: 750px;
+      }
+    }      
+
+    
+    /*BOTÂO WHATS*/
+
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    @media (max-width: 768px) {
+      .floating-button {
+        bottom: 100px;
+      }
+    }
+    
+    .floating-btn {
+      text-decoration: none; /* Remove o sublinhado do link */
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .floating-btn:hover {
+      background-color: #128C7E;
+    }
+
+    
+    
