@@ -114,5 +114,41 @@
       background-color: #128C7E;
     }
 
+    /* CARDS QUANDO BUSCAR AJUDA */
+    .card {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      background: #ccf0c0;
+      color: #222;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+  }
+  
+    .card-img {
+        border-radius: 10px 10px 0 0; /* Bordas arredondadas superiores */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .help-section h5{
+      font-family: 'Montserrat', 'Poppins';
+      font-size: 25px;
+      color: #1d3557;
+    }
     
+    .card p {
+      /* font-family: 'Lora'; */
+      /* font-family: 'Open Sans '; */
+      /* font-family: 'Roboto'; */
+      font-family: 'Poppins';
+      font-weight: 600;
+      font-size: 18px;
+      color: #444;
+    }
+  @media (min-width: 390px) and (max-width: 767px) {  
+      .card-img {
+          height: 90px;
+      }
+  }
     

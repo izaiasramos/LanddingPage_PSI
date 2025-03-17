@@ -6,6 +6,9 @@
   <title>Bruna Bessa - Psicóloga Infantil</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
   <link rel="stylesheet" href="/index.css">
   <style>
     /* Estilos globais */
@@ -33,7 +36,6 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
 </head>
 <body>
   <div class="pos-f-t">
@@ -88,7 +90,7 @@
 
   <!-- Seção Sobre/Qualificações -->
   <div class="container col-10 my-5">
-    <div class="row">
+    <div class="row" style="min-height: 550px; margin-top: 150px;margin-bottom:10%;">
       <!-- Imagem -->
       <div class="col-12 col-md-5 mb-3 mb-md-0">
         <img src="./img/imgSobre.jpeg" alt="Bruna Bessa" class="img-fluid rounded w-100">
@@ -98,8 +100,8 @@
         <div class="row">
           <!-- Títulos -->
           <div class="col-12">
-            <h2 style="font-family: 'Helvetica Neue', sans-serif; color:#777; text-align:center;">Bruna Bessa</h2>
-            <h5 style="font-family: sans-serif; color:#555; margin-bottom:20px;text-align:center;">Psicóloga</h5>
+            <h2 style="font-family: 'Helvetica Neue', sans-serif; color:#777; text-align:start;">Bruna Bessa</h2>
+            <h5 style="font-family: sans-serif; color:#555; margin-bottom:20px;text-align:start;">Psicóloga</h5>
             <h6 style="font-family: sans-serif; font-size:17px; color:#555;">Psicóloga Infanto Juvenil e Orientadora Parental</h6>
             <p style="font-family: sans-serif; font-size:17px; color:#555; margin-bottom:30px;">Florescendo junto com pais e filhos</p>
           </div>
@@ -221,7 +223,7 @@
 
 
   <section class="impact-section py-5" style="background-color: #f0f0f0;">
-    <div class="container">
+    <div class="container"  style="margin-top:7vh; margin-bottom:7vh;">
         <div class="row">
             <div class="col-12 text-center">
                 <h2 class="fw-bold mb-4" style="color: #343a40; font-family: 'Montserrat', sans-serif;">Por Que Me Contratar?</h2>
@@ -279,61 +281,22 @@
 
 
 <section class="help-section py-5" style="background: #6991ce; color: #fff;">
-  <div class="container text-center">
+  <div class="container text-center" style="margin-top: 4%; margin-bottom: 3%;">
     <h2 class="fw-bold mb-4">Quando Buscar Ajuda?</h2>
     <p class="lead mb-5" style="max-width: 700px; margin: 0 auto;">
       Se você observa mudanças significativas no comportamento, dificuldades emocionais ou conflitos familiares, é hora de buscar apoio profissional. Estou aqui para transformar desafios em oportunidades de crescimento.
     </p>
     <div class="row g-4">
       <!-- Card 1 -->
-    <style>  
-      .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px; /* Espaçamento entre os cards */
-    }
-    
-    .card {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        background: #ccf0c0;
-        color: #222;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
-    
-    .card-img {
-        border-radius: 10px 10px 0 0; /* Bordas arredondadas superiores */
-        width: 100%;
-        object-fit: cover;
-    }
-    
-    .card-content {
-        flex: 1; /* Garante que todo o conteúdo tenha altura igual */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px;
-    }
-    
-    @media (min-width: 390px) and (max-width: 767px) {  
-        .card-img {
-            height: 90px;
-        }
-    }
-    
-    </style>  
-    
-    <div class="col-md-4">  
-        <div class="card p-0 border-0 shadow-lg text-center">  
-            <img src="img/cards/desafiosEmocionais.jpg" alt="Dificuldades Emocionais" class="card-img" style="width: 100%; height: auto;">  
-            <div class="p-4">  
-                <h5>Desafios Emocionais</h5>  
-                <p>Crianças ou adolescentes com tristeza, ansiedade ou estresse excessivo.</p>  
-            </div>  
-        </div>  
-    </div>  
+      <div class="col-md-4">  
+          <div class="card p-0 border-0 shadow-lg text-center">  
+              <img src="img/cards/desafiosEmocionais.jpg" alt="Dificuldades Emocionais" class="card-img" style="width: 100%; height: auto;">  
+              <div class="p-4">  
+                  <h5>Desafios Emocionais</h5>  
+                  <p>Crianças ou adolescentes com tristeza, ansiedade ou estresse excessivo.</p>  
+              </div>  
+          </div>  
+      </div>  
       <!-- Card 2 -->
       <div class="col-md-4">
         <div class="card p-0 border-0 shadow-lg text-center" style=" color: #333; border-radius: 10px;">
@@ -355,15 +318,11 @@
         </div>
       </div>
     </div>
-    <div class="button-wrap">
       <div class="glass-button">
         <a href="#contact" class="btn btn-lg mt-5" style="    background: #2575fc; color:#fff;">Agende Sua Consulta</a>
-      </div>  
-    </div>  
+      </div>    
   </div>
 </section>
-
-
 
    
 <section id="form" class="form">
@@ -399,22 +358,24 @@
 </section>
 <style>
   .box-shadow {  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */  
+    padding-top: 30px;
+    display:flex;
+    justify-content: center;
 }  
 .box-shadow:hover {  
   opacity: 0.8; /* Reduz a opacidade */  
   transition: opacity 0.5s; /* Animação suave */  
 }  
+ .shadow {
+  max-height: 600px;
+ }
 </style>
 <style>
-  body {
-    font-family: 'Montserrat', sans-serif;
-}
-
 .hero {
     background: linear-gradient(to right, #6a11cb, #2575fc);
     color: white;
     padding: 100px 0;
+
 }
 
 .hero h1 {
@@ -440,16 +401,6 @@
 </style>
 
 <style>
-  body {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.hero {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    padding: 100px 0;
-}
-
 .features {
     padding: 80px 0;
 }
