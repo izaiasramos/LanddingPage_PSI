@@ -78,8 +78,13 @@
         height: 750px;
       }
     }      
-
+    /* FRASES */
     
+    /* .icons i {
+      z-index:2;
+      height: 20px;
+      color: #222;
+    } */
     /*BOTÂO WHATS*/
 
     .floating-button {
@@ -123,6 +128,7 @@
       display: flex;
       flex-direction: column;
       flex: 1;
+      height: 100%;
   }
   
     .card-img {
@@ -136,7 +142,13 @@
       font-size: 25px;
       color: #1d3557;
     }
-    
+    .desafios .col-md-6{
+      flex: 1;
+    }
+
+    .desafios .col-md-6 img{
+      height: 300px !important;
+    }
     .card p {
       /* font-family: 'Lora'; */
       /* font-family: 'Open Sans '; */
