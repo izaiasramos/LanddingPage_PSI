@@ -159,8 +159,13 @@
       color: #444;
     }
   @media (min-width: 390px) and (max-width: 767px) {  
-      .card-img {
-          height: 90px;
-      }
+    .desafios .col-md-6 {
+      width: 100%; /* Faz os cards ocuparem a largura total */
+      margin-bottom: 20px; /* Adiciona espaço entre os cards */
+    }
+  
+    .desafios .col-md-6 img {
+      height: auto !important; /* Permite que a altura da imagem se ajuste ao conteúdo */
+    }
   }
     
