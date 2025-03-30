@@ -26,9 +26,10 @@
   /* Collapse Menu Styles para mobile */
   .collapse-menu {
     background-color: #6991ce;
-    padding: 1rem;
+    padding: 2rem;
+    padding-top: 4rem;
   }
-  .collapse-menu button {
+  .collapse-menu a {
     margin-bottom: 1rem;
     width: 100%;
   }
@@ -142,11 +143,8 @@
       font-size: 25px;
       color: #1d3557;
     }
-    .desafios .col-md-6{
-      flex: 1;
-    }
 
-    .desafios .col-md-6 img{
+    .help-section .col-md-6 img{
       height: 300px !important;
     }
     .card p {
