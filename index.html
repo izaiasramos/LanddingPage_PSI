@@ -44,32 +44,41 @@
   <div class="pos-f-t">
     <nav class="navbar navbar-dark">
       <div class="desktop-menu container-fluid">
-        <a class="navbar-brand" href="#">Bruna Bessa</a>
-
-          <!-- Menu exclusivo para desktop -->
-          <nav class="d-none d-lg-block mt-0 pt-0">
-            <div class="container text-center">
-              <a href="#sobre">Sobre</a>
-              <a href="#qualifications">Competências</a>
-              <a href="#trajetoria">Trajetória</a>
-              <a href="#contact">Contato</a>
+        <div class="row w-100 align-items-center">
+          <!-- Nome à esquerda -->
+          <div class="col-auto">
+            <a class="navbar-brand" href="#">Bruna Bessa</a>
+          </div>
+          
+          <!-- Menu à direita -->
+          <div class="col text-end">
+            <!-- Menu Desktop -->
+            <nav class="d-none d-lg-inline-block mt-0 pt-0">
+              <a href="#sobre" class="mx-3">Sobre</a>
+              <a href="#impact-section" class="mx-3">Por Que Me Contratar</a>
+              <a href="#help-section" class="mx-3">Quando Buscar Ajuda</a>
+              <a href="#contact-section" class="mx-3">Fale Comigo</a>
               <a href="https://www.instagram.com/brubs_psi/" target="_blank" class="instagram-link ms-3">
                 <i class="bi bi-instagram"></i>
               </a>
+            </nav>
+            
+            <!-- Menu Mobile - Agora em linha -->
+            <div class="d-inline-flex align-items-center d-lg-none">
+              <a href="https://www.instagram.com/brubs_psi/" target="_blank" class="instagram-link me-3">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" 
+                      data-bs-target="#navbarToggleExternalContent">
+                <span class="navbar-toggler-icon"></span>
+              </button>
             </div>
-          </nav>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
 
-        <!-- Botão de collapse: só aparece em mobile -->
-          <div class="d-flex align-items-center">
-      <a href="https://www.instagram.com/brubs_psi/" target="_blank" class="instagram-link me-3 d-lg-none">
-        <i class="bi bi-instagram"></i>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-</nav>
     <!-- Conteúdo do menu collapse (só mobile) -->
     <div class="collapse d-lg-none" id="navbarToggleExternalContent">
       <div class="collapse-menu d-grid flex-direction-row align-items-center">
@@ -705,6 +714,76 @@
     </div>
   </div>
 </div>
+
+
+
+<!-- Adicione esta seção antes do formulário de contato -->
+<section class="instagram-section py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <h2 class="fw-bold" style="color: #333;">Acompanhe no Instagram</h2>
+        <p class="lead" style="color: #6c757d;">Dicas diárias sobre psicologia infantil e desenvolvimento familiar</p>
+        <a href="https://www.instagram.com/brubs_psi/" target="_blank" class="btn btn-instagram mt-3">
+          <i class="bi bi-instagram me-2"></i> @brubs_psi
+        </a>
+      </div>
+      
+      <!-- Widget do Instagram (substitua pelo embed real da sua conta) -->
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="ratio ratio-1x1">
+          <!-- Widget oficial do Instagram (obtenha em: https://developers.facebook.com/docs/instagram/embed) -->
+          <iframe src="https://www.instagram.com/p/C8I0fX1uX6S/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+      </div>
+      
+      <!-- Alternativa: 3 posts em destaque -->
+      <div class="col-12 mt-4 d-none"> <!-- Opcional: mostra 3 posts -->
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4">
+            <a href="https://www.instagram.com/p/C8I0fX1uX6S/" target="_blank">
+              <img src="https://via.placeholder.com/300x300" alt="Post Instagram" class="img-fluid rounded shadow">
+            </a>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a href="https://www.instagram.com/p/C8I0fX1uX6S/" target="_blank">
+              <img src="https://via.placeholder.com/300x300" alt="Post Instagram" class="img-fluid rounded shadow">
+            </a>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a href="https://www.instagram.com/p/C8I0fX1uX6S/" target="_blank">
+              <img src="https://via.placeholder.com/300x300" alt="Post Instagram" class="img-fluid rounded shadow">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Adicione estes estilos -->
+<style>
+  .btn-instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-instagram:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(225, 48, 108, 0.3);
+    color: white;
+  }
+  
+  .instagram-section iframe {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+</style>
+
 
 
   <!-- Script para fechar o menu mobile ao clicar fora dele -->
