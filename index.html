@@ -139,7 +139,7 @@
       
       .frases-rolagem {
         display: inline-block;
-        animation: rolarFrases 50s linear infinite;
+        animation: rolarFrases 50s linear infinite; /* Velocidade aumentada (era 50s) */
         position: relative;
         z-index: 2;
       }
@@ -147,7 +147,7 @@
       .frase-item {
         display: inline-block;
         text-align: center;
-        padding-right: 8%;
+        padding-right: 5%;
         margin-right: 50px;
       }
       
@@ -161,12 +161,14 @@
         display: inline-block;
         line-height: 1.3;
       }
-      .frases-background-icons i{
+      
+      .frases-background-icons i {
         font-size: 28px !important;
         color: #222;
       }
+      
       @keyframes rolarFrases {
-        0% { transform: translateX(10%); }
+        0% { transform: translateX(20%); } 
         100% { transform: translateX(-100%); }
       }
       
@@ -174,9 +176,28 @@
         0%, 100% { transform: translateY(0) rotate(0deg); }
         50% { transform: translateY(-10px) rotate(5deg); }
       }
+      
+      /* Media query para mobile */
+      @media (max-width: 768px) {
+
+        @keyframes rolarFrases {
+        0% { transform: translateX(10%); } /* Alterado de 10% para 100% para evitar espaçamento */
+        100% { transform: translateX(-100%); }
+      }
+        .frase-item p {
+          font-size: 1.2em; /* Tamanho reduzido para mobile */
+        }
+        
+        .frases-container {
+          height: 67px; /* Altura reduzida para mobile */
+        }
+        
+        .frases-rolagem {
+          animation-duration: 45s; /* Velocidade um pouco menor para mobile */
+        }
+      }
     </style>
-  </head>
-  <body>
+    
     <div class="frases-container">
       <!-- Ícones de fundo fixos -->
       <div class="frases-background-icons">
@@ -204,15 +225,6 @@
         <i class="bi bi-patch-check" style="left: 90%; top: 50%; font-size: 1.4em; opacity: 0.3; animation-delay: 4.2s;"></i>
         
         <!-- Linha inferior -->
-        <i class="bi bi-egg-fill" style="left: 8%; top: 80%; font-size: 1.2em; opacity: 0.3; animation-delay: 0.3s;"></i>
-        <i class="bi bi-balloon" style="left: 18%; top: 85%; font-size: 1.3em; opacity: 0.35; animation-delay: 0.8s;"></i>
-        <i class="bi bi-cloud-sun" style="left: 28%; top: 80%; font-size: 1.1em; opacity: 0.3; animation-delay: 1.3s;"></i>
-        <i class="bi bi-bandaid" style="left: 38%; top: 85%; font-size: 1.4em; opacity: 0.25; animation-delay: 1.8s;"></i>
-        <i class="bi bi-cup-hot" style="left: 48%; top: 80%; font-size: 1.2em; opacity: 0.3; animation-delay: 2.3s;"></i>
-        <i class="bi bi-joystick" style="left: 58%; top: 85%; font-size: 1.3em; opacity: 0.35; animation-delay: 2.8s;"></i>
-        <i class="bi bi-music-note-beamed" style="left: 68%; top: 80%; font-size: 1.1em; opacity: 0.3; animation-delay: 3.3s;"></i>
-        <i class="bi bi-palette" style="left: 78%; top: 85%; font-size: 1.4em; opacity: 0.25; animation-delay: 3.8s;"></i>
-        <i class="bi bi-teddy-bear" style="left: 88%; top: 80%; font-size: 1.2em; opacity: 0.3; animation-delay: 4.3s;"></i>
       </div>
       
       <!-- Frases em rolagem -->
@@ -343,7 +355,7 @@
                 <div class="impact-card p-4" style="background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                     <i class="fas fa-lightbulb fa-3x mb-3" style="color: #6991ce;"></i>
                     <h4 style="color: #343a40; font-weight: bold; font-family: 'Montserrat', sans-serif;">Orientação Parental</h4>
-                    <p style="color: #556374; font-weight: bold;">Ajudo os pais a entenderem e lidarem com os desafios do desenvolvimento infantil, promovendo uma relação mais saudável com seus filhos.</p>
+                    <p style="color: #556374; font-weight: bold;">Ajudo os pais a lidarem de forma assertiva com seus filhos, baseado em evidências científicas e práticas de desenvolvimento infantil, permitindo que os pais compreendam melhor as necessidades emocionais e psicológicas de seus filhos. Além disso, busco incentivar a comunicação efetiva, estabelecer limites saudáveis e promover um ambiente familiar harmonioso.</p>
                 </div>
             </div>
             <div class="impact col-md-4 text-center mb-4">
@@ -441,7 +453,7 @@
         </div>
       </div>
       <div class="glass-button">
-        <a href="#contact" class="btn btn-lg mt-5" style="background: #2575fc; color:#fff;">Agende Sua Consulta</a>
+        <a href="#contact-section" class="btn btn-lg mt-5" style="background: #2575fc; color:#fff;">Agende Sua Consulta</a>
       </div>    
     </div>
   </section>
@@ -473,7 +485,7 @@
           </div>
           <!-- Imagem Impactante -->
           <div class="col-md-6 box-shadow">
-              <img src="img/familiaFeliz.jpg" alt="Família feliz" class="img-fluid rounded shadow">
+              <img src="img/familiaFeliz.webp" alt="Família feliz" class="img-fluid rounded shadow">
           </div>
       </div>
   </div>
