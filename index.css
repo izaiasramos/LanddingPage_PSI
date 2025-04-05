@@ -1,3 +1,12 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+
+
 /* HEADER */
 
 /* Menu Mobile: */
@@ -8,7 +17,8 @@
     z-index: 1050;
   }
   .navbar {
-    background-color: #6991ce;
+    /* background-color: #6991ce; */
+    background-color: #f96d0e;
   }
   .navbar-brand {
     color: #fff;
@@ -25,7 +35,8 @@
   }
   /* Collapse Menu Styles para mobile */
   .collapse-menu {
-    background-color: #6991ce;
+    /* background-color: #6991ce; */
+    background-color: #f96d0e;
     padding: 2rem;
     padding-top: 4rem;
   }
@@ -39,9 +50,10 @@
   /* Menu Desktop (flutuante) */
   .desktop-menu {
     position: fixed;
-    top: 0; /* ou ajuste para que fique abaixo de um eventual cabeçalho */
+    top: 0;
     width: 100%;
-    background-color: #6991ce;
+    /* background-color: #6991ce; */
+    background-color: #f96d0e;
     height: 70px;
     z-index: 1050;
   }
@@ -80,12 +92,9 @@
       }
     }      
     /* FRASES */
+
+
     
-    /* .icons i {
-      z-index:2;
-      height: 20px;
-      color: #222;
-    } */
     /*BOTÂO WHATS*/
 
     .floating-button {
@@ -120,6 +129,22 @@
       background-color: #128C7E;
     }
 
+    /* SOBRE */
+    .sobre {
+      padding-top: 50px;
+    }
+    .sobre img {
+      border-radius: 10px;
+      height: 30vh;
+    }
+
+    @media (max-width: 500px) {
+      .textSobre {
+        width: 80%;
+        margin-left: 30px;
+      }
+    }
+
     /* CARDS QUANDO BUSCAR AJUDA */
     .card {
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -148,9 +173,6 @@
       height: 300px !important;
     }
     .card p {
-      /* font-family: 'Lora'; */
-      /* font-family: 'Open Sans '; */
-      /* font-family: 'Roboto'; */
       font-family: 'Poppins';
       font-weight: 600;
       font-size: 18px;
@@ -166,4 +188,134 @@
       height: auto !important; /* Permite que a altura da imagem se ajuste ao conteúdo */
     }
   }
+  /* JUNTOS PODEMOS */
+  .box-shadow {  
+    padding-top: 30px;
+    display:flex;
+    justify-content: center;
+}  
+.box-shadow:hover {  
+  opacity: 0.8; /* Reduz a opacidade */  
+  transition: opacity 0.5s; /* Animação suave */  
+}  
+ .shadow {
+  max-height: 650px;
+ }
+
+.hero {
+    background-color: #6991ce;
+    color: white;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 2.9rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #5a81c5;
+}  
+
+  /* FORMULÁRIO */
+  .contact-form-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-form .input-group {
+    width: 48%;
+    position: relative;
+}
+
+.contact-form .input-group.full-width {
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: none;
+    padding: 12px 45px;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 8px rgba(105, 145, 206, 0.5);
+}
+
+.contact-form .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #6991ce;
+}
+
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #6991ce, #5678b8);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #5678b8, #415d9b);
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        flex-direction: column;
+        padding: 0.5rem !important;
+    }
+
+    .contact-form .input-group {
+        width: 100%;
+    }
     
+}
