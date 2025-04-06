@@ -1,5 +1,6 @@
 body {
-  font-family: 'Arial', sans-serif;
+  /* font-family: 'Arial', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   background-color: #fff;
   margin: 0;
   padding: 0;
@@ -203,8 +204,8 @@ body {
  }
 
 .hero {
-    background-color: #6991ce;
-    color: white;
+    background-color: #ccf0c0;
+    color: #343a40;
     padding: 100px 0;
 }
 
