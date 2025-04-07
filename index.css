@@ -320,3 +320,23 @@ body {
     }
     
 }
+
+/* FOOTER */
+.hover-link {
+  transition: color 0.3s ease;
+}
+.hover-link:hover {
+  color: #f96d0e !important;
+}
+footer {
+  background-color: #343a40; /* Cinza escuro para contraste */
+}
+
+footer a {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  footer .col-md-4 {
+    text-align: center;
+  }
+}

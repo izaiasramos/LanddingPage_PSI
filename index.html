@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <link rel="js" href="index.js">
 </head>
 <body>
   <div class="pos-f-t">
@@ -49,13 +50,7 @@
     </nav>
     
 <script>
-  document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
-    e.preventDefault();                                               // evita o comportamento padrão do link
-    window.scrollTo({
-      top: 0,                                                         // rola ate o topo
-      behavior: 'smooth'                                              // rolagem suave
-    });
-  });
+
 </script>
     <!-- Conteúdo do menu collapse (só mobile) -->
     <div class="collapse d-lg-none" id="navbarToggleExternalContent">
@@ -245,7 +240,7 @@
       <div class="row justify-content-center">
         <!-- Imagem Redonda -->
         <div class="col-10 col-sm-8 col-md-6 col-lg-4 mb-4 mb-md-0 text-center">
-          <img src="./img/imgSobre.webp" alt="Bruna Bessa" class="img-fluid rounded-circle w-85 shadow-lg">
+          <img loading="eager" src="./img/imgSobre.webp" alt="Bruna Bessa" class="img-fluid rounded-circle w-85 shadow-lg">
         </div>
         
         <!-- Texto -->
@@ -602,7 +597,7 @@
             <i class="fab fa-whatsapp fs-4"></i>
           </a>
         </div>
-        <p class="text-muted small">Bruna Bessa - Psicóloga Infantojuvenil<br>CRP: 06/XXXXXX</p>
+        <p class="small">Bruna Bessa - Psicóloga Infantojuvenil<br>CRP: 06/210644</p>
       </div>
     </div>
 
@@ -615,70 +610,8 @@
   </div>
 </footer>
 
-<!-- Estilos adicionais para o footer -->
-<style>
-  .hover-link {
-    transition: color 0.3s ease;
-  }
-  .hover-link:hover {
-    color: #f96d0e !important;
-  }
-  footer {
-    background-color: #343a40; /* Cinza escuro para contraste */
-  }
 
-  footer a {
-    color: #fff;
-  }
-  @media (max-width: 768px) {
-    footer .col-md-4 {
-      text-align: center;
-    }
-  }
-</style>
-
-
-
-
-  <!-- Script para fechar o menu mobile ao clicar fora dele -->
-  <script>
-    document.addEventListener('click', function(event) {
-      const collapseElement = document.getElementById('navbarToggleExternalContent');
-      const toggler = document.querySelector('.navbar-toggler');
-      if (toggler.contains(event.target)) return;
-      if (collapseElement.classList.contains('show') && !collapseElement.contains(event.target)) {
-        let collapseInstance = bootstrap.Collapse.getInstance(collapseElement);
-        if (!collapseInstance) {
-          collapseInstance = new bootstrap.Collapse(collapseElement, { toggle: false });
-        }
-        collapseInstance.hide();
-      }
-    });
-    
-    // Script para enviar formulário via WhatsApp
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var nome = document.getElementById('nome').value;
-      var email = document.getElementById('email').value;
-      var telefone = document.getElementById('telefone').value;
-      var mensagem = document.getElementById('mensagem').value;
-    
-      // Monta a mensagem usando \n para quebras de linha
-      var texto = "Contato via Landing Page:\n" +
-                  "Nome: " + nome + "\n" +
-                  "E-mail: " + email + "\n" +
-                  "Telefone: " + telefone + "\n" +
-                  "Mensagem: " + mensagem;
-      
-      // Substitua pelo seu número do WhatsApp com código do país (ex.: 55 para Brasil)
-      var numeroWhatsApp = "5511968174258";
-      
-      // Cria a URL com os parâmetros da mensagem
-      var url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texto);
-      window.open(url, "_blank");
-    });
-  </script>
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js" defer></script>
 </body>
 </html>
