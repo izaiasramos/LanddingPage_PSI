@@ -3,15 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bruna Bessa - Psicóloga Infantil e Orientação Parental em São Paulo</title>
   <meta name="description" content="Psicóloga infantil e juvenil em São Paulo. Atendimento online e presencial para crianças, adolescentes e orientação parental. Agende sua consulta!">
   <meta name="keywords" content="psicóloga infantil, orientação parental, atendimento online, psicologia juvenil, São Paulo">
+  <title>Bruna Bessa - Psicóloga Infantil e Orientação Parental em São Paulo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
-  <script src="index.js"></script>
+
+  <style>
+  body {
+    /* font-family: 'Arial', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* HEADER */
+
+  /* Menu Mobile: */
+  .pos-f-t {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1050;
+    }
+    .navbar {
+      /* background-color: #6991ce; */
+      background-color: #f96d0e;
+    }
+    .navbar-brand {
+      color: #fff;
+    }
+    /* O botão de collapse (apenas mobile) permanece visível em telas menores */
+    .navbar-toggler {
+      display: block;
+    }
+    @media (min-width: 992px) { /* lg breakpoint */
+      .navbar-toggler, 
+      #navbarToggleExternalContent {
+        display: none !important;
+      }
+    }
+    /* Collapse Menu Styles para mobile */
+    .collapse-menu {
+      /* background-color: #6991ce; */
+      background-color: #f96d0e;
+      padding: 2rem;
+      padding-top: 4rem;
+    }
+    .collapse-menu a {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    .collapse-menu button:last-child {
+      margin-bottom: 0;
+    }
+    /* Menu Desktop (flutuante) */
+    .desktop-menu {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      /* background-color: #6991ce; */
+      background-color: #f96d0e;
+      height: 70px;
+      z-index: 1050;
+    }
+    .desktop-menu .container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100%;
+    }
+    .desktop-menu a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .desktop-menu a:hover {
+      text-decoration: underline;
+    }
+  
+    /* BANNER */
+  
+    /* Banner: adicionar margem superior para não ficar oculto atrás do menu fixo */
+    .banner {
+      margin-top: 50px; /* igual à altura do menu desktop (ajuste se necessário) */
+    }
+    .container-fluid img {
+      padding-bottom: 140px;
+      height: 550px;
+      background-size: cover !important;
+    }
+
+    @media (min-width: 1200px) {
+      /*Banner*/  
+      .container-fluid img {
+        height: 750px;
+      }
+    }      
+
+    /*BOTÂO WHATS*/
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    @media (max-width: 768px) {
+      .floating-button {
+        bottom: 100px;
+      }
+    }
+    
+    .floating-btn {
+      text-decoration: none; /* Remove o sublinhado do link */
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .floating-btn:hover {
+      background-color: #128C7E;
+    }
+
+    /* FRASES */
+    .frases-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 80px;
+      overflow: hidden;
+      background-color: #f96d0e;
+      white-space: nowrap;
+      position: relative;
+    }
+    
+    .frases-background-icons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .frases-background-icons i {
+      position: absolute;
+      font-size: 1.2em;
+      color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .frases-rolagem {
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .frase-item {
+      display: inline-block;
+      text-align: center;
+      padding-right: 2%;
+      margin-right: 50px;
+    }
+    
+    .frase-item p {
+      font-size: 2em;
+      color: #fff;
+      font-weight: 950;
+      margin: 0;
+      max-width: 1350px;
+      display: inline-block;
+      line-height: 1.3;
+    }
+    
+    .frases-background-icons i {
+      font-size: 28px !important;
+      color: #222;
+    }
+    
+    /* Media query para mobile */
+    @media (max-width: 768px) {
+      .frase-item p {
+        font-size: 1.1em;
+      }
+      .frases-container {
+        height: 67px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="pos-f-t">
@@ -51,9 +243,6 @@
       </div>
     </nav>
     
-<script>
-
-</script>
     <!-- Conteúdo do menu collapse (só mobile) -->
     <div class="collapse d-lg-none" id="navbarToggleExternalContent">
       <div class="collapse-menu d-grid flex-direction-row align-items-center">
@@ -79,75 +268,9 @@
     <!-- Botão Flutuante -->
     <div class="floating-button">
       <a href="https://api.whatsapp.com/send?phone=5511968174258&text=Olá,%20gostaria%20de%20falar%20com%20a%20Bruna%20Bessa." target="_blank" aria-label="whattsap" class="floating-btn">
-        <i class="fab fa-whatsapp"></i>
+        <i class="bi bi-whatsapp"></i>
       </a>
     </div>
-    <style>
-      .frases-container {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 80px;
-        overflow: hidden;
-        background-color: #f96d0e;
-        white-space: nowrap;
-        position: relative;
-      }
-      
-      .frases-background-icons {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 1;
-      }
-      
-      .frases-background-icons i {
-        position: absolute;
-        font-size: 1.2em;
-        color: rgba(255, 255, 255, 0.3);
-      }
-      
-      .frases-rolagem {
-        display: inline-block;
-        position: relative;
-        z-index: 2;
-      }
-      
-      .frase-item {
-        display: inline-block;
-        text-align: center;
-        padding-right: 2%;
-        margin-right: 50px;
-      }
-      
-      .frase-item p {
-        font-size: 2em;
-        color: #fff;
-        font-weight: 950;
-        margin: 0;
-        max-width: 1350px;
-        display: inline-block;
-        line-height: 1.3;
-      }
-      
-      .frases-background-icons i {
-        font-size: 28px !important;
-        color: #222;
-      }
-      
-      /* Media query para mobile */
-      @media (max-width: 768px) {
-        .frase-item p {
-          font-size: 1.1em;
-        }
-        .frases-container {
-          height: 67px;
-        }
-      }
-    </style>
     
     <div class="frases-container">
       <!-- Ícones de fundo fixos -->
@@ -268,44 +391,7 @@
     </div>
   </div>
 </div>
-<style>
-  @media (max-width: 767px) {
 
-    #sobre .textSobre {
-      text-align: start;
-    }
-    #sobre .rounded-circle {
-      margin: 0 auto;
-    }
-    #sobre h2, 
-    #sobre h4, 
-    #sobre .fst-italic {
-      text-align: center !important;
-    }
-  }
-</style>
-
-<!-- POR QUE ME CONTRATAR -->
-  <style>   
-    #impact-section .row {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    
-    .impact {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .impact-card {
-      flex: 1; /* Isso faz com que todos tenham a mesma altura */
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      border-radius: 20px;
-    }
-    
-  </style>
   <section id="impact-section" class="py-5" style="background-color: #f0f0f0;line-height:2;">
     <div class="container"  style="margin-top:7vh; margin-bottom:7vh;">
         <div class="row">
@@ -317,21 +403,21 @@
         <div class="row mt-5">
             <div class="impact col-md-4 text-center mb-4">
                 <div class="impact-card p-4" style="background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                    <i class="fas fa-users fa-3x mb-3" style="color: #6991ce;"></i>
+                    <i class="bi bi-people-fill fs-1 mb-3" style="color: #6991ce;"></i>
                     <h4 style="color: #343a40; font-weight: bold;">Atendimento Humanizado</h4>
                     <p style="color: #556374; font-weight: bold;">Cada caso é único. Meu trabalho é focado em entender as necessidades de sua família e oferecer soluções personalizadas.</p>
                 </div>
             </div>
             <div class="impact col-md-4 text-center mb-4">
                 <div class="impact-card p-4" style="background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                    <i class="fas fa-lightbulb fa-3x mb-3" style="color: #6991ce;"></i>
+                    <i class="bi bi-lightbulb-fill fs-1 mb-3" style="color: #6991ce;"></i>
                     <h4 style="color: #343a40; font-weight: bold;">Orientação Parental</h4>
                     <p style="color: #556374; font-weight: bold;">Ajudo os pais a lidarem de forma assertiva com seus filhos, baseado em evidências científicas e práticas de desenvolvimento infantil, permitindo que os pais compreendam melhor as necessidades emocionais e psicológicas de seus filhos. Além disso, busco incentivar a comunicação efetiva, estabelecer limites saudáveis e promover um ambiente familiar harmonioso.</p>
                 </div>
             </div>
             <div class="impact col-md-4 text-center mb-4">
                 <div class="impact-card p-4" style="background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                    <i class="fas fa-laptop fa-3x mb-3" style="color: #6991ce;"></i>
+                    <i class="bi bi-laptop fs-1 mb-3" style="color: #6991ce;"></i>
                     <h4 style="color: #343a40; font-weight: bold;">Atendimento Online e Presencial</h4>
                     <p style="color: #556374; font-weight:bold">Ofereça flexibilidade para atender sua família da forma que for mais conveniente, com a mesma qualidade e dedicação.</p>
                 </div>
@@ -344,16 +430,16 @@
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="list-unstyled ms-5" style="color: #6c757d;">
-                            <li class="mb-3 fw-bold"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Dificuldades emocionais em crianças e adolescentes</li>
-                            <li class="mb-3 fw-bold"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Conflitos familiares e orientação parental</li>
-                            <li class="mb-3 fw-bold"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Desenvolvimento de habilidades sociais</li>
+                            <li class="mb-3 fw-bold"><i class="bi bi-check-circle-fill me-2" style="color: #28a745;"></i>Dificuldades emocionais em crianças e adolescentes</li>
+                            <li class="mb-3 fw-bold"><i class="bi bi-check-circle-fill me-2" style="color: #28a745;"></i>Conflitos familiares e orientação parental</li>
+                            <li class="mb-3 fw-bold"><i class="bi bi-check-circle-fill me-2" style="color: #28a745;"></i>Desenvolvimento de habilidades sociais</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <ul class="list-unstyled ms-5" style="color: #6c757d;">
-                            <li class="mb-3 fw-bold"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Acompanhamento psicológico para adolescentes</li>
-                            <li class="mb-3 fw-bold"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Melhoria da comunicação entre pais e filhos</li>
-                            <li class="mb-3 fw-bold"><i class="fas fa-check-circle me-2" style="color: #28a745;"></i>Superação de traumas e desafios em geral</li>
+                            <li class="mb-3 fw-bold"><i class="bi bi-check-circle-fill me-2" style="color: #28a745;"></i>Acompanhamento psicológico para adolescentes</li>
+                            <li class="mb-3 fw-bold"><i class="bi bi-check-circle-fill me-2" style="color: #28a745;"></i>Melhoria da comunicação entre pais e filhos</li>
+                            <li class="mb-3 fw-bold"><i class="bi bi-check-circle-fill me-2" style="color: #28a745;"></i>Superação de traumas e desafios em geral</li>
                         </ul>
                     </div>
                 </div>
@@ -489,19 +575,19 @@
             <h2>Fale Conosco</h2>
             <form id="contactForm" class="contact-form p-5" action="send_email.php" method="POST">
                 <div class="input-group">
-                    <i class="icon fas fa-user"></i>
+                    <i class="icon bi bi-person-fill"></i>
                     <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
                 </div>
                 <div class="input-group">
-                    <i class="icon fas fa-envelope"></i>
+                    <i class="icon bi bi-envelope-fill"></i>
                     <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
                 </div>
                 <div class="input-group">
-                    <i class="icon fas fa-phone"></i>
+                    <i class="icon bi bi-telephone-fill"></i>
                     <input type="text" id="telefone" name="telefone" placeholder="Seu telefone" required>
                 </div>
                 <div class="input-group full-width">
-                    <i class="icon fas fa-comment"></i>
+                    <i class="icon bi bi-chat-fill"></i>
                     <textarea id="mensagem" name="mensagem" rows="1" placeholder="Sua mensagem..." required></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Enviar Mensagem</button>
@@ -611,7 +697,6 @@
     </div>
   </div>
 </footer>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="index.js" defer></script>

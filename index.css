@@ -1,135 +1,3 @@
-body {
-  /* font-family: 'Arial', sans-serif; */
-  font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-/* HEADER */
-
-/* Menu Mobile: */
-.pos-f-t {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1050;
-  }
-  .navbar {
-    /* background-color: #6991ce; */
-    background-color: #f96d0e;
-  }
-  .navbar-brand {
-    color: #fff;
-  }
-  /* O botão de collapse (apenas mobile) permanece visível em telas menores */
-  .navbar-toggler {
-    display: block;
-  }
-  @media (min-width: 992px) { /* lg breakpoint */
-    .navbar-toggler, 
-    #navbarToggleExternalContent {
-      display: none !important;
-    }
-  }
-  /* Collapse Menu Styles para mobile */
-  .collapse-menu {
-    /* background-color: #6991ce; */
-    background-color: #f96d0e;
-    padding: 2rem;
-    padding-top: 4rem;
-  }
-  .collapse-menu a {
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-  .collapse-menu button:last-child {
-    margin-bottom: 0;
-  }
-  /* Menu Desktop (flutuante) */
-  .desktop-menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    /* background-color: #6991ce; */
-    background-color: #f96d0e;
-    height: 70px;
-    z-index: 1050;
-  }
-  .desktop-menu .container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-  }
-  .desktop-menu a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-  .desktop-menu a:hover {
-    text-decoration: underline;
-  }
-
-  /* BANNER */
-
-     /* Banner: adicionar margem superior para não ficar oculto atrás do menu fixo */
-     .banner {
-        margin-top: 50px; /* igual à altura do menu desktop (ajuste se necessário) */
-      }
-      .container-fluid img {
-        padding-bottom: 140px;
-        height: 550px;
-        background-size: cover !important;
-      }
-
-    @media (min-width: 1200px) {
-      /*Banner*/  
-      .container-fluid img {
-        height: 750px;
-      }
-    }      
-    /* FRASES */
-
-
-    
-    /*BOTÂO WHATS*/
-
-    .floating-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-    @media (max-width: 768px) {
-      .floating-button {
-        bottom: 100px;
-      }
-    }
-    
-    .floating-btn {
-      text-decoration: none; /* Remove o sublinhado do link */
-      background-color: #25D366;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 70px;
-      height: 70px;
-      font-size: 28px;
-      cursor: pointer;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .floating-btn:hover {
-      background-color: #128C7E;
-    }
-
     /* SOBRE */
     .sobre {
       padding-top: 50px;
@@ -139,12 +7,47 @@ body {
       height: 30vh;
     }
 
+    @media (max-width: 767px) {
+
+      #sobre .textSobre {
+        text-align: start;
+      }
+      #sobre .rounded-circle {
+        margin: 0 auto;
+      }
+      #sobre h2, 
+      #sobre h4, 
+      #sobre .fst-italic {
+        text-align: center !important;
+      }
+    }
+
     @media (max-width: 500px) {
       .textSobre {
         width: 80%;
         margin-left: 30px;
       }
     }
+
+    /* PORQUE ME CONTRATAR */
+    #impact-section .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .impact {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .impact-card {
+      flex: 1; /* Isso faz com que todos tenham a mesma altura */
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      border-radius: 20px;
+    }
+    
 
     /* CARDS QUANDO BUSCAR AJUDA */
     .card {
