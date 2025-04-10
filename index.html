@@ -8,13 +8,55 @@
   <title>Bruna Bessa - Psicóloga Infantil e Orientação Parental em São Paulo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <!--<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">-->
   <link rel="stylesheet" href="index.css">
 
   <style>
+
+
+/* GFS Didot (usado na seção de contato) */
+@font-face {
+  font-family: 'GFS Didot';
+  src: url('fonts/gfsdidot-regular-webfont.woff2') format('woff2');
+  font-weight: 400; /* Peso regular */
+  font-style: normal;
+}
+
+/* Lora (usado no menu e títulos) */
+@font-face {
+  font-family: 'Lora';
+  src: url('fonts/lora-variablefont_wght-webfont.woff2') format('woff2');
+  font-weight: 400; /* Peso normal */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('fonts/lora-variablefont_wght-webfont.woff2') format('woff2');
+  font-weight: 700; /* Peso bold */
+  font-style: normal;
+}
+
+/* Montserrat (usado em subtítulos e body) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/montserrat-variablefont_wght-webfont.woff2') format('woff2');
+  font-weight: 600; /* Peso semibold */
+  font-style: normal;
+}
+
+/* Poppins (usado em botões e textos gerais) */
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/poppins-semibold-webfont.woff2') format('woff2');
+  font-weight: 600; /* Peso semibold */
+  font-style: normal;
+}  
+
   body {
     /* font-family: 'Arial', sans-serif; */
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', 'sans-serif'; */
+    font-family: 'Poppins', sans-serif;
     background-color: #fff;
     margin: 0;
     padding: 0;
@@ -211,7 +253,7 @@
       <div class="desktop-menu container-fluid">
         <div class="row w-100 align-items-center">
           <!-- Nome à esquerda -->
-          <div class="col-auto" style="font-family: lora;">
+          <div class="col-auto" style="font-family: 'Lora';">
             <a class="navbar-brand scroll-to-top" href="#menu">Bruna Bessa</a>
           </div>
           
@@ -664,7 +706,7 @@
             <a href="tel:+5511968174258" class="text-white text-decoration-none hover-link">(11) 96817-4258</a>
           </li>
           <li class="mb-2">
-            <i class="fab fa-whatsapp me-2" style="color: #25D366;"></i>
+            <i class="bi bi-whatsapp me-2" style="color: #25D366;"></i>
             <a href="https://api.whatsapp.com/send?phone=5511968174258&text=Olá,%20gostaria%20de%20falar%20com%20a%20Bruna%20Bessa." target="_blank" class="text-white text-decoration-none hover-link">WhatsApp</a>
           </li>
           <li class="mb-2">
@@ -682,7 +724,7 @@
             <i class="bi bi-instagram fs-4"></i>
           </a>
           <a href="https://api.whatsapp.com/send?phone=5511968174258&text=Olá,%20gostaria%20de%20falar%20com%20a%20Bruna%20Bessa." target="_blank" class="text-white hover-link">
-            <i class="fab fa-whatsapp fs-4"></i>
+            <i class="bi bi-whatsapp fs-4"></i>
           </a>
         </div>
         <p class="small">Bruna Bessa - Psicóloga Infantojuvenil<br>CRP: 06/210644</p>
