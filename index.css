@@ -66,32 +66,13 @@
         width: 100%;
         object-fit: cover;
     }
-
-    .help-section h5{
-      font-family: 'Montserrat', 'Poppins';
-      font-size: 25px;
-      color: #1d3557;
-    }
-
-    .help-section .col-md-6 img{
-      height: 300px !important;
-    }
-    .card p {
-      font-family: 'Poppins';
+   .card p {
+      font-family: 'PTserif';
       font-weight: 600;
-      font-size: 18px;
+      font-size: 20px;
       color: #444;
     }
-  @media (min-width: 390px) and (max-width: 767px) {  
-    .desafios .col-md-6 {
-      width: 100%; /* Faz os cards ocuparem a largura total */
-      margin-bottom: 20px; /* Adiciona espaço entre os cards */
-    }
-  
-    .desafios .col-md-6 img {
-      height: auto !important; /* Permite que a altura da imagem se ajuste ao conteúdo */
-    }
-  }
+
   /* JUNTOS PODEMOS */
   .box-shadow {  
     padding-top: 30px;

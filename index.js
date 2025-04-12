@@ -22,6 +22,12 @@ if (collapseElement.classList.contains('show') && !collapseElement.contains(even
 }
 });
 
+// ENVIAR EVENTO DE CLIQUE PARA ANALYTICS AO CLICAR NO BOTÃO DO WHATSAPP 
+document.querySelector('.floating-btn').addEventListener('click', function(e) {
+  e.preventDefault(); // Impede o comportamento padrão do link
+  gtag('event', 'click_whatsapp', { 'event_category': 'Engagement', 'event_label': 'WhatsApp Button' });
+  window.open(this.href, '_blank'); // Abre o link do WhatsApp após o evento
+});
 
 //SCRIPT PARA ENVIAR FORMULÁRIO  VIA WHATSAPP
 document.getElementById('contactForm').addEventListener('submit', function(e) {
@@ -43,5 +49,12 @@ var numeroWhatsApp = "5511968174258";
 
 // Cria a URL com os parâmetros da mensagem
 var url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texto);
-window.open(url, "_blank");
+
+// Enviar evento para o Google Analytics ao enviar o formulário
+gtag('event', 'form_submission', { 'event_category': 'Engagement', 'event_label': 'Contact Form' });
+
+// Adicionar um pequeno atraso para garantir que o evento seja enviado
+setTimeout(function() {
+  window.open(url, "_blank");
+}, 200);
 });
