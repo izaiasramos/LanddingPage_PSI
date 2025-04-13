@@ -45,35 +45,48 @@
     font-style: normal;
   }
 
-  /* Montserrat (usado em subtítulos e body) */
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('fonts/montserrat-variablefont_wght-webfont.woff2') format('woff2');
-    font-weight: 1100; /* Peso semibold */
-    font-style: normal;
-  }
-
   /* Poppins (usado em botões e textos gerais) */
   @font-face {
     font-family: 'Poppins';
     src: url('fonts/poppins-black-webfont.woff2') format('woff2');
-    font-weight: 600; /* Peso semibold */
+    font-weight: 100; /* Peso semibold */
     font-style: normal;
   }  
 
-  body {
-    /* font-family: 'Arial', sans-serif; */
-    font-family: 'PTserif', 'sans-serif'; 
-    /*font-family: 'Poppins', sans-serif;*/
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1,h2,h3,h4,h5,h6 {
-    font-family: 'Montserrat';
-    font-weight: 1000 !important;;
-  }
+  /* Montserrat (used in subtitles and body) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/static/Montserrat-Regular.woff2') format('truetype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/static/Montserrat-Bold.woff2') format('truetype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/static/Montserrat-Black.woff2') format('truetype');
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Use Bold for general text */
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; /* Use Black for headings */
+}
   /* HEADER */
 
   /* Menu Mobile: */
@@ -236,7 +249,7 @@
     .frase-item p {
       font-size: 2em;
       color: #fff;
-      font-weight: 950;
+      font-weight: 700;
       margin: 0;
       max-width: 1350px;
       display: inline-block;
@@ -480,8 +493,8 @@
         <div class="row mt-5">
             <div class="col-11" style="display: flex; justify-content:center; align-items:center; flex-direction:column; text-align:start;line-height:2;">
                 <h3 class="fw-bold mb-3" style="color: #343a40; text-align:start;">Casos que Atendo</h3>
-                <p class="mb-4 fw-bold" style="color: #6c757d; text-align:center;">Já ajudei muitas famílias a superarem desafios como:</p>
-                <div class="row">
+                <p class="mb-4 fw-bold fs-5" style="color: #6c757d; text-align:center;">Já ajudei muitas famílias a superarem desafios como:</p>
+                <div class="row fs-5">
                     <div class="col-md-6">
                         <ul class="list-unstyled ms-5" style="color: #6c757d;">
                             <li class="mb-3 fw-bold"><i class="bi bi-check-circle-fill me-2" style="color: #28a745;"></i>Dificuldades emocionais em crianças e adolescentes</li>
@@ -507,7 +520,7 @@
   <section id="help-section" class="py-5" style="background: #f96d0e; color: #fff;">
     <div class="container text-center" style="margin-top: 4%; margin-bottom: 3%;">
       <h2 class="fw-bold mb-4">Quando Buscar Ajuda?</h2>
-      <p class="lead mb-5" style="max-width: 700px; margin: 0 auto; font-weight: 500;">
+      <p class="fw-bold lead mb-5" style="max-width: 700px; margin: 0 auto; font-weight: 500;">
         Se você observa mudanças significativas no comportamento, dificuldades emocionais ou conflitos familiares, é hora de buscar apoio profissional. Estou aqui para transformar desafios em oportunidades de crescimento.
       </p>
       <div class="row g-4">
@@ -597,8 +610,8 @@
       <div class="row align-items-center">
           <!-- Texto Inspirador -->
           <div class="col-md-6">
-              <h2 class="my-3" style="font-weight: 800; font-size:35px">Juntos, Podemos Transformar o Futuro</h2>
-              <p class="lead" style="font-weight: 500;">
+              <h2 class="my-3" style="font-weight: 1000; font-size:35px">Juntos, Podemos Transformar o Futuro</h2>
+              <p class="lead" style="font-weight: 800;">
                   Toda criança e adolescente merece crescer com equilíbrio emocional, segurança e apoio. Se você percebe desafios no desenvolvimento do seu filho, estou aqui para ajudar. 
               </p>
               <p class="fw-semibold">O primeiro passo para um futuro mais saudável começa agora.</p>
@@ -620,7 +633,7 @@
         <h3 class="fw-bold fs-3 pb-4 blockquote-footer text-white" style="font-family: 'Didot';">Bruna Bessa</h3>
       </blockquote>
       <h2 class="fw-bold mt-5">Quer conversar? Estou à disposição!</h2>
-      <p class="fs-5">
+      <p class="fs-5 fw-bold">
         Preencha o formulário e compartilhe suas preocupações.  
         Juntos, podemos encontrar o melhor caminho para fortalecer sua relação familiar.
       </p>
@@ -629,20 +642,20 @@
             <h2>Fale Conosco</h2>
             <form id="contactForm" class="contact-form p-5" action="send_email.php" method="POST">
                 <div class="input-group">
-                    <i class="icon bi bi-person-fill"></i>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    <i class="icon bi bi-person-fill fw-bolder"></i>
+                    <input class="fw-bolder" type="text" id="nome" name="nome" placeholder="Seu nome" required>
                 </div>
                 <div class="input-group">
                     <i class="icon bi bi-envelope-fill"></i>
-                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                    <input class="fw-bolder" type="email" id="email" name="email" placeholder="Seu e-mail" required>
                 </div>
                 <div class="input-group">
                     <i class="icon bi bi-telephone-fill"></i>
-                    <input type="text" id="telefone" name="telefone" placeholder="Seu telefone" required>
+                    <input class="fw-bolder" type="text" id="telefone" name="telefone" placeholder="Seu telefone" required>
                 </div>
                 <div class="input-group full-width">
                     <i class="icon bi bi-chat-fill"></i>
-                    <textarea id="mensagem" name="mensagem" rows="1" placeholder="Sua mensagem..." required></textarea>
+                    <textarea class="fw-bolder" id="mensagem" name="mensagem" rows="1" placeholder="Sua mensagem..." required></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Enviar Mensagem</button>
             </form>
