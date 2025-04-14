@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Psicóloga infantil e juvenil em São Paulo. Atendimento online e presencial para crianças, adolescentes e orientação parental. Agende sua consulta!">
-  <meta name="keywords" content="psicóloga infantil, orientação parental, atendimento online, psicologia juvenil, São Paulo">
+  <meta name="keywords" content="psicóloga infantil, or0,ientação parental, atendimento online, psicologia juvenil, São Paulo">
   <title>Bruna Bessa - Psicóloga Infantil e Orientação Parental em São Paulo</title>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8H5WWQCW8C"></script>
@@ -15,10 +15,13 @@
 
     gtag('config', 'G-8H5WWQCW8C');
   </script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link defer href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!--<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">-->
   <link rel="stylesheet" href="index.css">
+  <link rel="preload" href="img/banner_2800desktop.webp" as="image" media="(min-width: 1200px)">
+  <link rel="preload" href="img/banner_desktop.webp" as="image" media="(min-width: 768px) and (max-width: 1199px)">
+  <link rel="preload" href="img/banner.webp" as="image" media="(max-width: 767px)">
   <style>
 
 
@@ -56,21 +59,21 @@
   /* Montserrat (used in subtitles and body) */
 @font-face {
   font-family: 'Montserrat';
-  src: url('fonts/Montserrat/static/Montserrat-Regular.woff2') format('truetype');
+  src: url('fonts/Montserrat/static/montserrat-regular-webfont.woff2') format('truetype');
   font-weight: 400; /* Regular */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('fonts/Montserrat/static/Montserrat-Bold.woff2') format('truetype');
+  src: url('fonts/Montserrat/static/montserrat-bold-webfont.woff2') format('truetype');
   font-weight: 700; /* Bold */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('fonts/Montserrat/static/Montserrat-Black.woff2') format('truetype');
+  src: url('fonts/Montserrat/static/montserrat-black-webfont.woff2') format('truetype');
   font-weight: 900; /* Black */
   font-style: normal;
 }
@@ -324,9 +327,9 @@ h1, h2, h3, h4, h5, h6 {
   <div class="container-fluid p-0 banner">
     <div class="col-12">
       <picture>
-        <source loading="eager" class="bannerDesck" srcset="img/banner_2800desktop.webp" media="(min-width: 1200px)">
-        <source loading="eager" class="bannerMedio" srcset="img/banner_desktop.webp" media="(min-width: 768px)">
-        <img loading="eager" src="img/banner.webp" alt="" class="w-100 mt-0 p-0">
+        <source loading="eager" class="bannerDesck" srcset="img/banner_2800desktop.webp" media="(min-width: 1200px)" sizes="100vw">
+        <source loading="eager" class="bannerMedio" srcset="img/banner_desktop.webp" media="(min-width: 768px)" sizes="100vw">
+        <img loading="eager" src="img/banner.webp" alt="" class="w-100 mt-0 p-0" sizes="100vw">
       </picture>
     </div>
   </div>
@@ -451,7 +454,7 @@ h1, h2, h3, h4, h5, h6 {
           
           <!-- Logo Centralizada -->
           <div class="col-12 text-center mb-4 mt-4">
-            <img loading="lazy" src="./img/logo-removebg.png" alt="Bruna Bessa" class="img-fluid logo-brilho" style="max-width: 70%;">
+            <img loading="lazy" src="./img/logo-removebg.webp" alt="Bruna Bessa" class="img-fluid logo-brilho" style="max-width: 70%;">
           </div>
         </div>
       </div>
@@ -567,7 +570,7 @@ h1, h2, h3, h4, h5, h6 {
         <!-- Card 5 - Quando buscar ajuda para o adolescente -->
         <div class="col-md-4">
           <div class="card p-0 border-0 shadow-lg text-center">
-            <img src="img/cards/desafios.webp" alt="Apoio na Infância" class="card-img" style="width: 100%; height: 35vh;">
+            <img loading="lazy" src="img/cards/desafios.webp" alt="Apoio na Infância" class="card-img" style="width: 100%; height: 35vh;">
             <div class="p-4">
               <h4>Apoio na Infância</h4>
               <p>Pequenos desafios emocionais não tratados podem se tornar grandes feridas na vida adulta. Cuide do bem-estar do seu filho desde cedo.</p>
