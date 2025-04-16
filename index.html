@@ -4,10 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Psicóloga infantil e juvenil em São Paulo. Atendimento online e presencial para crianças, adolescentes e orientação parental. Agende sua consulta!">
-  <meta name="keywords" content="psicóloga infantil, or0,ientação parental, atendimento online, psicologia juvenil, São Paulo">
+  <meta name="keywords" content="psicóloga infantil, orientação parental, atendimento online, psicologia juvenil, São Paulo">
   <title>Bruna Bessa - Psicóloga Infantil e Orientação Parental em São Paulo</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8H5WWQCW8C"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!--<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">-->
+  <link rel="stylesheet" href="index.css">
+  <link rel="preload" href="img/banner.webp" as="image" media="(max-width: 767px)">
+  <link rel="canonical" href="https://www.brubspsi.com.br/">
+
+  <!-- Schema Markup para ajudar na indexação da pagina no google
+        Propósito: Melhora a indexação e pode gerar rich snippets nos resultados de busca, como informações de contato ou avaliações.-->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bruna Bessa",
+      "jobTitle": "Psicóloga Infantojuvenil",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Santo Amaro, 7134, Sala 45",
+        "addressLocality": "Santo Amaro",
+        "addressRegion": "São Paulo",
+        "postalCode": "04702-002",
+        "addressCountry": "BR"
+      },
+      "telephone": "+5511968174258",
+      "url": "https://www.brubspsi.com.br",
+      "sameAs": ["https://www.instagram.com/brubs_psi/"]
+    }
+    </script>
+
+  <!-- Google tag (gtag.js)  para o google Analytics-->
+  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-8H5WWQCW8C"></script>-->
+  <script>
+    setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8H5WWQCW8C';
+      script.async = true;
+      document.head.appendChild(script);
+    }, 2000);
+  </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -15,31 +52,8 @@
 
     gtag('config', 'G-8H5WWQCW8C');
   </script>
-  <link defer href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!--<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">-->
-  <link rel="stylesheet" href="index.css">
-  <link rel="preload" href="img/banner_2800desktop.webp" as="image" media="(min-width: 1200px)">
-  <link rel="preload" href="img/banner_desktop.webp" as="image" media="(min-width: 768px) and (max-width: 1199px)">
-  <link rel="preload" href="img/banner.webp" as="image" media="(max-width: 767px)">
+
   <style>
-
-
-  /* GFS Didot (usado na seção de contato) */
-  @font-face {
-    font-family: 'GFS Didot';
-    src: url('fonts/gfsdidot-regular-webfont.woff2') format('woff2');
-    font-weight: 400; /* Peso regular */
-    font-style: normal;
-  }
-
-  /* Lora (usado no menu e títulos) */
-  @font-face {
-    font-family: 'PTserif';
-    src: url('fonts/ptserif-regular-webfont.woff') format('woff2');
-    font-weight: 400; /* Peso normal */
-    font-style: normal;
-  }
 
   @font-face {
     font-family: 'Lora';
@@ -47,14 +61,6 @@
     font-weight: 700; /* Peso bold */
     font-style: normal;
   }
-
-  /* Poppins (usado em botões e textos gerais) */
-  @font-face {
-    font-family: 'Poppins';
-    src: url('fonts/poppins-black-webfont.woff2') format('woff2');
-    font-weight: 100; /* Peso semibold */
-    font-style: normal;
-  }  
 
   /* Montserrat (used in subtitles and body) */
 @font-face {
@@ -329,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
       <picture>
         <source loading="eager" class="bannerDesck" srcset="img/banner_2800desktop.webp" media="(min-width: 1200px)" sizes="100vw">
         <source loading="eager" class="bannerMedio" srcset="img/banner_desktop.webp" media="(min-width: 768px)" sizes="100vw">
-        <img loading="eager" src="img/banner.webp" alt="" class="w-100 mt-0 p-0" sizes="100vw">
+        <img loading="eager" src="img/banner.webp" alt="Psicóloga Bruna Bessa atendendo famílias em São Paulo" class="w-100 mt-0 p-0" sizes="100vw">
       </picture>
     </div>
   </div>
@@ -435,8 +441,13 @@ h1, h2, h3, h4, h5, h6 {
       <div class="row justify-content-center">
         <!-- Imagem Redonda -->
         <div class="col-10 col-sm-8 col-md-6 col-lg-4 mb-4 mb-md-0 text-center">
-          <img loading="eager" src="./img/imgSobre.webp" alt="Foto da psicóloga Bruna Bessa" class="img-fluid rounded-circle w-85 shadow-lg">
-        </div>
+          <img 
+          loading="lazy" 
+          src="./img/imgSobre.webp" 
+          alt="Foto da psicóloga Bruna Bessa" 
+          class="img-fluid rounded-circle w-85 shadow-lg" 
+          width="400" 
+          height="400">        </div>
         
         <!-- Texto -->
         <div class="col-12 col-md-10 col-lg-8 text-center text-md-start mt-3">
@@ -454,7 +465,14 @@ h1, h2, h3, h4, h5, h6 {
           
           <!-- Logo Centralizada -->
           <div class="col-12 text-center mb-4 mt-4">
-            <img loading="lazy" src="./img/logo-removebg.webp" alt="Bruna Bessa" class="img-fluid logo-brilho" style="max-width: 70%;">
+            <img 
+            loading="lazy" 
+            src="./img/logo-removebg.webp" 
+            alt="Logo Bruna Bessa Psicóloga" 
+            class="img-fluid logo-brilho" 
+            style="max-width: 70%;" 
+            width="300" 
+            height="300">
           </div>
         </div>
       </div>
@@ -632,8 +650,8 @@ h1, h2, h3, h4, h5, h6 {
   <section id="contact-section" class=" py-4 text-center text-white" style="background-color: #f96d0e;">
     <div class="container" style="margin-top: 50px;">
       <blockquote class="blockquote">
-        <p class="fs-4 mb-4" style="font-family: 'Lora'; font-weight:1000;">"Cada desafio na infância é uma oportunidade para crescer. Estou aqui para ajudar você e seu filho nessa jornada."</p>
-        <h3 class="fw-bold fs-3 pb-4 blockquote-footer text-white" style="font-family: 'Didot';">Bruna Bessa</h3>
+        <p class="fs-4 mb-4" style="font-family: 'Lora'; font-weight:900;">"Cada desafio na infância é uma oportunidade para crescer. Estou aqui para ajudar você e seu filho nessa jornada."</p>
+        <h3 class="fw-bold fs-3 pb-4 blockquote-footer text-white" >Bruna Bessa</h3>
       </blockquote>
       <h2 class="fw-bold mt-5">Quer conversar? Estou à disposição!</h2>
       <p class="fs-5 fw-bold">
