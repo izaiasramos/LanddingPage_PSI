@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Psicóloga infantil e juvenil em São Paulo. Atendimento online e presencial para crianças, adolescentes e orientação parental. Agende sua consulta!">
+  <meta name="description" content="Psicóloga infantil e juvenil com atendimento online e presencial em São Paulo. Orientação parental e suporte para crianças e adolescentes. Agende com Bruna Bessa!">  
   <meta name="keywords" content="psicóloga infantil, orientação parental, atendimento online, psicologia juvenil, São Paulo">
-  <title>Bruna Bessa - Psicóloga Infantil e Orientação Parental em São Paulo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Psicóloga Infantil e Juvenil - Atendimento Online e em São Paulo</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!--<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@600&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">-->
   <link rel="stylesheet" href="index.css">
@@ -14,13 +15,13 @@
   <link rel="canonical" href="https://www.brubspsi.com.br/">
 
   <!-- Schema Markup para ajudar na indexação da pagina no google
-        Propósito: Melhora a indexação e pode gerar rich snippets nos resultados de busca, como informações de contato ou avaliações.-->
+  Propósito: Melhora a indexação e pode gerar rich snippets nos resultados de busca, como informações de contato ou avaliações.-->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Bruna Bessa",
-      "jobTitle": "Psicóloga Infantojuvenil",
+      "jobTitle": "Psicóloga Infantil e Juvenil",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Santo Amaro, 7134, Sala 45",
@@ -31,7 +32,8 @@
       },
       "telephone": "+5511968174258",
       "url": "https://www.brubspsi.com.br",
-      "sameAs": ["https://www.instagram.com/brubs_psi/"]
+      "sameAs": ["https://www.instagram.com/brubs_psi/"],
+      "description": "Psicóloga infantil e juvenil em São Paulo, especializada em atendimento para crianças, adolescentes e orientação parental."
     }
     </script>
 
@@ -55,34 +57,34 @@
 
   <style>
 
-  @font-face {
-    font-family: 'Lora';
-    src: url('fonts/lora-variablefont_wght-webfont.woff2') format('woff2');
-    font-weight: 700; /* Peso bold */
-    font-style: normal;
-  }
-
-  /* Montserrat (used in subtitles and body) */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/Montserrat/static/montserrat-regular-webfont.woff2') format('truetype');
-  font-weight: 400; /* Regular */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/Montserrat/static/montserrat-bold-webfont.woff2') format('truetype');
-  font-weight: 700; /* Bold */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/Montserrat/static/montserrat-black-webfont.woff2') format('truetype');
-  font-weight: 900; /* Black */
-  font-style: normal;
-}
+    @font-face {
+      font-family: 'Lora';
+      src: url('fonts/lora-variablefont_wght-webfont.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('fonts/Montserrat/static/montserrat-regular-webfont.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('fonts/Montserrat/static/montserrat-bold-webfont.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('fonts/Montserrat/static/montserrat-black-webfont.woff2') format('woff2');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -335,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
       <picture>
         <source loading="eager" class="bannerDesck" srcset="img/banner_2800desktop.webp" media="(min-width: 1200px)" sizes="100vw">
         <source loading="eager" class="bannerMedio" srcset="img/banner_desktop.webp" media="(min-width: 768px)" sizes="100vw">
-        <img loading="eager" src="img/banner.webp" alt="Psicóloga Bruna Bessa atendendo famílias em São Paulo" class="w-100 mt-0 p-0" sizes="100vw">
+        <img loading="eager" src="img/banner.webp" alt="Psicóloga infantil e juvenil Bruna Bessa em São Paulo" class="w-100 mt-0 p-0" sizes="100vw">
       </picture>
     </div>
   </div>
@@ -444,15 +446,17 @@ h1, h2, h3, h4, h5, h6 {
           <img 
           loading="lazy" 
           src="./img/imgSobre.webp" 
-          alt="Foto da psicóloga Bruna Bessa" 
+          alt="Bruna Bessa, psicóloga infantil e juvenil em São Paulo"
           class="img-fluid rounded-circle w-85 shadow-lg" 
           width="400" 
-          height="400">        </div>
+          height="400">
+        </div>
         
         <!-- Texto -->
         <div class="col-12 col-md-10 col-lg-8 text-center text-md-start mt-3">
-          <h2 class="text-primary" style="font-family: Montserrat; font-weight:900;">Bruna Bessa</h2>
-          <h1 class="text-secondary fs-5" style="font-weight: 700;">Psicóloga Infanto Juvenil e Orientadora Parental</h1>
+          <p class="text-primary fs-3" style="font-family: Montserrat; font-weight:900;">Bruna Bessa</p>
+          <h1 class="text-secondary fs-4" style="font-weight: 700;">Psicóloga Infantil, Juvenil e Orientadora Parental</h1>
+          <h2 class="text-secondary fs-5" style="font-weight: 700;">Orientação Parental para Famílias e Atendimento Presencial em São Paulo</h2>
           <p class="fs-5 my-3 text-muted fst-italic" style="font-weight: 500;">"Florescendo junto com pais e filhos"</p>
           
           <div class="textSobre mt-4 px-md-0 w-100 w-full ms-2 pe-2">
@@ -461,6 +465,7 @@ h1, h2, h3, h4, h5, h6 {
             <span class="d-block text-secondary fs-5 fw-bolder my-1">crianças de 3 a 11 anos - adolescentes de 12 a 19 anos.</span>
             <span class="d-block text-secondary fw-bold fs-5">Atendimento Online: Acima de 9 anos.</span>
             <p class="text-secondary fs-5 mt-3" style="font-weight: 500;">Auxilio os pais com orientações sobre desenvolvimento infantil para melhor lidar com seus filhos e terem uma relação saudável e harmoniosa.</p>
+            <p class="text-secondary fs-5 mt-3" style="font-weight: 500;">Como psicóloga infantil e juvenil em São Paulo, ofereço atendimento especializado para crianças de 3 a 11 anos e adolescentes de 12 a 19 anos, com foco em desenvolvimento emocional, comportamental e familiar. Meu trabalho inclui orientação parental para ajudar pais a construírem relações harmoniosas com seus filhos.</p>
           </div>
           
           <!-- Logo Centralizada -->
@@ -468,7 +473,7 @@ h1, h2, h3, h4, h5, h6 {
             <img 
             loading="lazy" 
             src="./img/logo-removebg.webp" 
-            alt="Logo Bruna Bessa Psicóloga" 
+            alt="Logo da psicóloga infantil e juvenil Bruna Bessa"            
             class="img-fluid logo-brilho" 
             style="max-width: 70%;" 
             width="300" 
@@ -548,7 +553,7 @@ h1, h2, h3, h4, h5, h6 {
         <!-- Card 1 -->
         <div class="col-md-4">  
             <div class="card p-0 border-0 shadow-lg text-center">  
-                <img loading="lazy" src="img/cards/desafiosEmocionais.webp" alt="Dificuldades Emocionais" class="card-img" style="width: 100%; height: 35vh;">  
+                <img loading="lazy" src="img/cards/desafiosEmocionais.webp" alt="Psicóloga infantil para desafios emocionais em crianças e adolescentes" class="card-img" style="width: 100%; height: 35vh;">  
                 <div class="p-4">  
                     <h4>Desafios Emocionais</h4>  
                     <p>Crianças ou adolescentes com tristeza, ansiedade ou estresse excessivo.</p>  
@@ -558,7 +563,7 @@ h1, h2, h3, h4, h5, h6 {
         <!-- Card 2 -->
         <div class="col-md-4">
           <div class="card p-0 border-0 shadow-lg text-center" style=" color: #333; border-radius: 10px;">
-            <img loading="lazy" src="img/cards/conflitos.webp" alt="Conflitos Familiares" class="card-img" style="width: 100%; height: 35vh;">
+            <img loading="lazy" src="img/cards/conflitos.webp" alt="Orientação parental para conflitos familiares por Bruna Bessa" class="card-img" style="width: 100%; height: 35vh;">
             <div class="p-4">
               <h4>Conflitos Familiares</h4>
               <p>Problemas de comunicação e desentendimentos que afetam o lar.</p>
@@ -568,7 +573,7 @@ h1, h2, h3, h4, h5, h6 {
         <!-- Card 3 -->
         <div class="col-md-4">
           <div class="card p-0 border-0 shadow-lg text-center" style=" color: #333; border-radius: 10px;">
-            <img loading="lazy" src="img/cards/academicos.webp" alt="Dificuldades Acadêmicas" class="card-img" style="width: 100%; height: 35vh;">
+            <img loading="lazy" src="img/cards/academicos.webp" alt="Psicóloga juvenil para desafios acadêmicos em São Paulo" class="card-img" style="width: 100%; height: 35vh;">
             <div class="p-4">
               <h4>Desafios Acadêmicos</h4>
               <p>Dificuldades na escola que afetam a autoestima e o desempenho.</p>
@@ -578,7 +583,7 @@ h1, h2, h3, h4, h5, h6 {
         <!-- Card 4 - Quando buscar ajuda para a criança -->
         <div class="col-md-4">
           <div class="card p-0 border-0 shadow-lg text-center">
-            <img loading="lazy" src="img/cards/comportamento.webp" alt="Apoio na Infância" class="card-img" style="width: 100%; height: 35vh;">
+            <img loading="lazy" src="img/cards/comportamento.webp" alt="Psicóloga infantil para desafios comportamentais" class="card-img" style="width: 100%; height: 35vh;">
             <div class="p-4">
               <h4>Desafios comportamentais</h4>
               <p>Crianças e adolescentes com comportamentos inapropriados.</p>
@@ -588,7 +593,7 @@ h1, h2, h3, h4, h5, h6 {
         <!-- Card 5 - Quando buscar ajuda para o adolescente -->
         <div class="col-md-4">
           <div class="card p-0 border-0 shadow-lg text-center">
-            <img loading="lazy" src="img/cards/desafios.webp" alt="Apoio na Infância" class="card-img" style="width: 100%; height: 35vh;">
+            <img loading="lazy" src="img/cards/desafios.webp" alt="Atendimento psicológico infantil online para apoio na infância" class="card-img" style="width: 100%; height: 35vh;">
             <div class="p-4">
               <h4>Apoio na Infância</h4>
               <p>Pequenos desafios emocionais não tratados podem se tornar grandes feridas na vida adulta. Cuide do bem-estar do seu filho desde cedo.</p>
@@ -599,7 +604,7 @@ h1, h2, h3, h4, h5, h6 {
         <!-- Card 6 - Quando buscar ajuda para o adolescente -->
         <div class="col-md-4">
           <div class="card p-0 border-0 shadow-lg text-center">
-            <img loading="lazy" src="img/cards/adolescencia.webp" alt="Desafios da Adolescência" class="card-img" style="width: 100%; height: 35vh;">
+            <img loading="lazy" src="img/cards/adolescencia.webp" alt="Psicóloga juvenil online para desafios da adolescência" class="card-img" style="width: 100%; height: 35vh;">
             <div class="p-4">
               <h4>Desafios da Adolescência</h4>
               <p>Ansiedade, insegurança, dificuldades emocionais, raiva em excesso, tristeza em excesso, quaisquer sinais de dificuldades podem impactar o futuro do seu filho. Acolher e orientar agora faz toda a diferença.</p>

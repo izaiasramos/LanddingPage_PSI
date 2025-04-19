@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /*?*fbclid=
+Disallow: /*?*utm_
+Sitemap: https://www.brubspsi.com.br/sitemap.xml
